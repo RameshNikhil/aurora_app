@@ -73,6 +73,14 @@ ShowUp(
             ),
 ),
 
+// Expanded(
+//             child: Center(
+//               child: Content(),
+//             ),
+//           ),
+
+
+
 
     //         Padding(
     //   padding: EdgeInsets.all(0.0),
@@ -121,3 +129,30 @@ ShowUp(
     
   }
 }
+
+
+// class Content extends StatelessWidget {
+//   // List<dynamic> treeList;
+//   // Content(this.treeList);
+
+//   @override
+//   Widget build(BuildContext context) {
+
+//     return Padding(
+//       padding: EdgeInsets.all(0.0),
+//       child: GridView.count(
+//         crossAxisCount: 2,
+//         padding: EdgeInsets.fromLTRB(16.0, 28.0, 16.0, 16.0),
+//         childAspectRatio: 8.0 / 10.5,
+//         mainAxisSpacing: 32.0,
+//         crossAxisSpacing: 16.0,
+//         children: <Widget>[
+
+//           Container(color: Colors.red,)
+          
+           
+//         ],
+//       ),
+//     );
+//   }
+// }

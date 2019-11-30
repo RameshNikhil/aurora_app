@@ -120,6 +120,8 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                                   ),
                                 ),
                               ),
+
+                              
                                 onTap: (){
 
                                   setState(() {

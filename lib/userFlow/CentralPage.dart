@@ -1,6 +1,7 @@
 import 'package:aurora_app/routing/fadeRoute.dart';
 import 'package:aurora_app/userFlow/IntroPage.dart';
 import 'package:aurora_app/utilities/DCBig.dart';
+import 'package:aurora_app/utilities/SignUpCard.dart';
 import 'package:aurora_app/utilities/showUp.dart';
 import 'package:flutter/material.dart';
 import '../utilities/DCBig.dart';
@@ -121,6 +122,12 @@ class CentralPage extends StatelessWidget {
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 7,
+                    ),
+
+
+                    SignUpCard(
+                      locStore: locStore,
+                      
                     ),
                    
                    

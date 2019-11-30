@@ -95,7 +95,7 @@ class IntroPage extends StatelessWidget {
                     ),
                     ShowUp(
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 40.0),
+                        padding: EdgeInsets.fromLTRB(0.0, 16.0, 16.0, 40.0),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
