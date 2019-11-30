@@ -96,11 +96,10 @@ class CentralPage extends StatelessWidget {
                   
                   child: Column(
                     children: <Widget>[
-
                          ShowUp(
                   child: DownloadCellBig(
-                     title: "container title",
-                    detail: "this is the detail of the container",
+                     title: "Loan Details",
+                    detail: "Help us understand your loan requirements",
                     trigger: introClosed,
                   ),
                   delay: delayAmount * 4,
@@ -110,8 +109,8 @@ class CentralPage extends StatelessWidget {
 
                        ShowUp(
                   child: DownloadCell(
-                    title: "container title",
-                    detail: "this is the detail of the container",
+                     title: "Loan Details",
+                    detail: "Help us understand your loan requirements",
                   ),
                   delay: delayAmount * 5,
                 ),
