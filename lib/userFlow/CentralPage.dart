@@ -8,7 +8,7 @@ import 'package:aurora_app/utilities/showUp.dart';
 import 'package:flutter/material.dart';
 import '../utilities/DCBig.dart';
 import './MessagePageLoanDetails.dart';
-import './MessagePageSavingsJourney.dart';
+import './EntrepreneurialQuestions.dart';
 
 class CentralPage extends StatelessWidget {
   var locStore;
@@ -137,7 +137,7 @@ class CentralPage extends StatelessWidget {
                       child: DownloadCell(
                         title: "3. Your Entrepreneurial Journey ",
                         detail: "Explore the options you have to expand professionally ",
-                        page: MessagePageLoanDetails(),
+                        page: EntrepreneurialQuestions(),
                         iconSize: 15.0,
                       ),
                       delay: delayAmount * 8,
