@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+
 class HomeScreen extends StatelessWidget {
-  var locStore; 
+  var locStore;
 
   HomeScreen({this.locStore});
 
@@ -9,12 +10,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var userName = locStore.getItem('userName');
-
     print(userName);
 
+    PageController _homePageController = PageController(
+      initialPage: 1,
+      keepPage: false,
+    );
 
-    return Container(
-      child: Text(userName),
+    return PageView(
+      controller: _homePageController,
+      scrollDirection: Axis.horizontal,
+      pageSnapping: true,
+      physics: BouncingScrollPhysics(),
+      children: <Widget>[
+
+        //Single Pages
+       
+      ],
     );
   }
 }
