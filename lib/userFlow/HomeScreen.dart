@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     PageController _homePageController = PageController(
-      initialPage: 1,
+      initialPage: 0,
       keepPage: false,
     );
 
