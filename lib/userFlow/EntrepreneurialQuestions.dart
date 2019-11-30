@@ -1,34 +1,27 @@
 import 'package:flutter/material.dart';
 import '../utilities/showUp.dart';
 
-class MessagePageLoanDetails extends StatefulWidget {
+class EntrepreneurialQuestions extends StatefulWidget {
   @override
-  _MessagePageState createState() => _MessagePageState();
+  _MessagePageSavingsJourneyState createState() =>
+      _MessagePageSavingsJourneyState();
 }
 
-class _MessagePageState extends State<MessagePageLoanDetails> {
+class _MessagePageSavingsJourneyState extends State<EntrepreneurialQuestions> {
   int delayAmount = 500;
   var messageIndex = 0;
   final List<String> _prefill = [
-    "How long do you want to take?",
-    "When do you need the loan? (dd/mm/yy)",
-    "Have you attempted to get a loan from another organisation but failed?",
-    "Pick a category for what purpose you will be using the loan for? (family, entrepenuership, etc.)",
-    "Thanks for the information. Feel free to change it on the dashboard at any time.",
-    "end"
+    "Why do you want to start this?",
+    "Who will be involved in it with you (if any)?",
+    "How will you get customers?",
+    "Submit your business plan",
+    "Thanks for the information. You can track your progress in your dashboard. ",
+    "End"
   ];
   // final List<String> _messages = ["How much money do you want to burrow?"];
 
   var _messages = [
-    {
-      "text":
-          "Help us better understand your loan requirements by answering a few questions",
-      "colored": true
-    },
-    {
-      "text": "How much money do you want to borrow? (max: 1000)",
-      "colored": true
-    },
+    {"text": "What business would you like to start?", "colored": true},
   ];
 
   TextEditingController messageEditingController = TextEditingController();
@@ -39,6 +32,7 @@ class _MessagePageState extends State<MessagePageLoanDetails> {
   void _handleSubmitted() {
     if (messageEditingController.text.trim() != "") {
       delayAmount = 0;
+
       setState(() {
         // _messages.add(messageEditingController.text);
         // _messages.add(messageEditingController.text);
@@ -52,13 +46,13 @@ class _MessagePageState extends State<MessagePageLoanDetails> {
         _messages.add(
             {"text": _prefill[messageIndex], "colored": true, "delay": 500});
       });
-      Future.delayed(const Duration(milliseconds: 200), () {
-        _scrollController.animateTo(_scrollController.position.maxScrollExtent);
-      });
 
       if (messageIndex == _prefill.length - 1) {
         Navigator.pop(context);
       }
+      Future.delayed(const Duration(milliseconds: 200), () {
+        _scrollController.animateTo(_scrollController.position.maxScrollExtent);
+      });
 
       messageEditingController.clear();
       setState(() {
