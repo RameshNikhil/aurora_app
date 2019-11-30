@@ -109,25 +109,35 @@ class _MessagePageState extends State<MessagePageLoanDetails> {
 
   Widget _messageToUser(message) {
     var colourz = Colors.grey[100];
-    if (message["colored"].toString() == "true") {
-      colourz = Color(0xff8636fa).withOpacity(0.33);
+    var cText = Colors.black;
+    var weight = FontWeight.normal;
+    if(message["colored"].toString() == "true"){
+    colourz = Color(0xff8636fa).withOpacity(0.70);
+    cText = Colors.white;
+    weight = FontWeight.bold;
+    
     }
-    return Center(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-          Container(
-              child: Text(
-                message["text"],
-                textAlign: TextAlign.center,
-              ),
-              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-              margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-              decoration: BoxDecoration(
-                  color: colourz,
-                  borderRadius: BorderRadius.all(Radius.circular(16.0)))),
-        ]));
+    return Center(child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+      Container(
+          child: Text(
+            message["text"],
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: cText,
+              fontWeight: weight
+            ),
+          ),
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+          decoration: BoxDecoration(
+              color: colourz,
+              borderRadius: BorderRadius.all(Radius.circular(16.0)))),
+    ]));
   }
+
+  
 
   Widget _textInput() {
     return Row(children: <Widget>[
