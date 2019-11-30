@@ -13,7 +13,7 @@ class _MessagePageState extends State<MainMessagePage> {
   int delayAmount = 500;
   var messageIndex = 0;
   final List<String> _prefill = ["How long do you want to take?", "When do you need the loan? (dd/mm/yy)", "Have you attempted to get a loan from another organisation but failed?", "Pick a category for what purpose you will be using the loan for? (family, entrepenuership, etc.)"];
-  // final List<String> _messages = ["How much monday do you want to burrow?"];
+  // final List<String> _messages = ["How much money do you want to burrow?"];
 
   var _messages = [
     {"text":"What would you like to know?", "colored":true},

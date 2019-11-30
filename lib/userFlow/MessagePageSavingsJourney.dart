@@ -11,10 +11,10 @@ class _MessagePageSavingsJourneyState extends State<MessagePageSavingsJouney> {
   int delayAmount = 500;
   var messageIndex = 0;
   final List<String> _prefill = ["How long do you want to take?", "is", "the", "big", "gay"];
-  // final List<String> _messages = ["How much monday do you want to burrow?"];
+  // final List<String> _messages = ["How much money do you want to burrow?"];
 
   var _messages = [
-    {"text": "How much monday do you want to burrow?", "colored": true},
+    {"text": "How much money do you want to burrow?", "colored": true},
   ];
 
   TextEditingController messageEditingController = TextEditingController();
@@ -99,7 +99,7 @@ class _MessagePageSavingsJourneyState extends State<MessagePageSavingsJouney> {
           child: TextField(
           decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: 'ask me anything...',
+          hintText: 'Type here...',
         ),
         style: TextStyle(fontSize: 17.0),
         controller: messageEditingController,
