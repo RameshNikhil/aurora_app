@@ -29,7 +29,7 @@ class CentralPage extends StatelessWidget {
 
           TopText(userName: userName,),
 
-          //GoalCells(),
+          GoalCells(),
 
           
 
@@ -73,3 +73,62 @@ class TopText extends StatelessWidget {
     );
   }
 }
+
+
+
+class GoalCells extends StatefulWidget {
+  var goal;
+  var point;
+
+  @override
+  _GoalCellsState createState() => new _GoalCellsState();
+}
+
+class _GoalCellsState extends State<GoalCells> {
+  @override
+  Widget build(BuildContext context) {
+    //Shader is for gradient text
+    final Shader linearGradient = LinearGradient(
+      colors: <Color>[Color(0xffc39cf4), Color(0xff9D78F3)],
+    ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
+
+    //LETS PRETEND THERE IS AN ARRAY WE HAVE. MAY PRETEND WE PASS IN FROM ANOTHER CLASS
+    //WITH THE FIRST BEING THE TITLE AND THE SECOND BEING THE DETAIL
+
+    var stepsList = ["test", "test2"];
+
+    //NEED TO FIX PADDING
+
+    return new Scaffold(
+      appBar: AppBar(elevation: 0),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
+        child: ListView(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 16.0),
+              child: Text(
+                'Roadmap',
+                style: new TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    foreground: Paint()..shader = linearGradient),
+              ),
+            ),
+
+            for(var i = 0; i < stepsList.length; i++ ) {
+
+              SingleGoalCell(
+                goal: goal, 
+                point: point
+              ),
+
+            }
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
