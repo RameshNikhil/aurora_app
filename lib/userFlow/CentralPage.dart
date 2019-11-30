@@ -5,6 +5,7 @@ import 'package:aurora_app/utilities/showUp.dart';
 import 'package:flutter/material.dart';
 import '../utilities/DCBig.dart';
 import './MessagePageLoanDetails.dart';
+import './MessagePageSavingsJourney.dart';
 
 class CentralPage extends StatelessWidget {
   var locStore;
@@ -103,30 +104,33 @@ class CentralPage extends StatelessWidget {
                    
                   
 
-                  ShowUp(
-                    child: DownloadCell(
-                      title: "My Savings Journey",
-                      detail: "fghj",
-                      page: MessagePageSavingsJourney(),
-                    ),
-                    delay: delayAmount * 5,
-                  ),
+                  // ShowUp(
+                  //   child: DownloadCell(
+                  //     title: "My Savings Journey",
+                  //     detail: "fghj",
+                  //     page: MessagePageSavingsJourney(),
+                  //   ),
+                  //   delay: delayAmount * 5,
+                  // ),
 
 
-                  ShowUp(
-                    child: DownloadCell(
-                      title: "My XXX Journey",
-                      detail: "this is the detail of the container",
-                    ),
-                    delay: delayAmount * 5,
-                  ),
-                  ShowUp(
-                    child: DownloadCell(
-                      title: "container title",
-                      detail: "this is the detail of the container",
-                    ),
-                    delay: delayAmount * 5,
-                  ),
+                  // ShowUp(
+                  //   child: DownloadCell(
+                  //     title: "My XXX Journey",
+                  //     detail: "this is the detail of the container",
+                  //   ),
+                  //   delay: delayAmount * 5,
+                  // ),
+                  // ShowUp(
+                  //   child: DownloadCell(
+                  //     title: "container title",
+                  //     detail: "this is the detail of the container",
+                  //   ),
+                  //   delay: delayAmount * 5,
+                  // ),
+
+
+
                 ],
               ),
             ),

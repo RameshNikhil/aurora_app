@@ -4,10 +4,10 @@ import '../utilities/showUp.dart';
 class MessagePageSavingsJouney extends StatefulWidget {
 
   @override
-  _MessagePageState createState() => _MessagePageState();
+  _MessagePageSavingsJourneyState createState() => _MessagePageSavingsJourneyState();
 }
 
-class _MessagePageState extends State<MessagePageSavingsJouney> {
+class _MessagePageSavingsJourneyState extends State<MessagePageSavingsJouney> {
   int delayAmount = 500;
   var messageIndex = 0;
   final List<String> _prefill = ["How long do you want to take?", "is", "the", "big", "gay"];
