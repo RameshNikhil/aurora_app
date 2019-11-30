@@ -33,7 +33,7 @@ class StatsBoard extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 30.0,
                           // foreground: Paint()..shader = linearGradient
-                          color: Color(0xff8636fa)
+                          color: Color(0xff5929F5)
                           ),
                     ),
                     Text(
@@ -42,7 +42,7 @@ class StatsBoard extends StatelessWidget {
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                           //foreground: Paint()..shader = linearGradient
-                          color: Color(0xff8636fa)
+                          color: Color(0xff5929F5)
                           ),
                     ),
                   ],
@@ -52,7 +52,7 @@ class StatsBoard extends StatelessWidget {
 
 ShowUp(
   child: Padding(
-              padding: EdgeInsets.only(top: 30.0, bottom: 16.0, right: 8.0, left: 8.0),
+              padding: EdgeInsets.only(top: 30.0, bottom: 16.0, right: 4.0, left: 4.0),
               child: Container(
               
                 height: 360,
@@ -61,23 +61,29 @@ ShowUp(
                   color: Colors.white.withOpacity(0),
               borderRadius: BorderRadius.circular(1400.0),
               
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  blurRadius: 40.0,
-                ),
-              ]),
+              // boxShadow: [
+              //   BoxShadow(
+              //     color: Colors.black.withOpacity(0.3),
+              //     blurRadius: 20.0,
+              //   ),
+              // ]
+              ),
               ), 
 
               
             ),
 ),
 
-// Expanded(
-//             child: Center(
-//               child: Content(),
-//             ),
-//           ),
+
+ShowUp(
+  child: Image.asset("lib/assets/images/body.png", height: 625,)
+),
+
+
+
+
+
+
 
 
 

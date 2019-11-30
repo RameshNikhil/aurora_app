@@ -1,5 +1,6 @@
 import 'package:aurora_app/routing/fadeRoute.dart';
 import 'package:aurora_app/userFlow/IntroPage.dart';
+import 'package:aurora_app/userFlow/StatsBoard.dart';
 import 'package:aurora_app/utilities/DCBig.dart';
 import 'package:aurora_app/utilities/SignUpCard.dart';
 import 'package:aurora_app/utilities/showUp.dart';
@@ -141,11 +142,37 @@ class CentralPage extends StatelessWidget {
                       delay: delayAmount * 8,
                     ),
 
-                   
-                    
-                   
-                  
 
+                    ShowUp(
+                      child: DownloadCell(
+                        title: "Loan Details",
+                        detail: "Help us understand your loan hhh",
+                        page: MessagePageLoanDetails(),
+                      ),
+                      delay: delayAmount * 9,
+                    ),
+
+
+                  ShowUp(
+                      child: DownloadCell(
+                        title: "Loan Details",
+                        detail: "Help us understand your loan hhh",
+                        page: MessagePageLoanDetails(),
+                      ),
+                      delay: delayAmount * 10,
+                    ),
+
+
+                   
+                    // DraggableScrollableSheet(
+                    //   builder: (context, scrollController){
+                    //     return SingleChildScrollView(
+                    //       controller: scrollController,
+                    //       child: StatsBoard(),
+                    //     );
+                    //   },
+                    // )
+                   
 
 
 
