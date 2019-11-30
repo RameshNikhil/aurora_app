@@ -45,6 +45,8 @@ flutter:
   assets:
    - lib/assets/images/graph.png
    - lib/assets/images/body.png
+   - lib/assets/images/dotRight.png
+   - lib/assets/images/dotLeft.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

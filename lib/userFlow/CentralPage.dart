@@ -44,6 +44,7 @@ class CentralPage extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 0.0),
         child: ListView(
           children: <Widget>[
+            // Image.asset("lib/assets/images/dotLeft.png",),
             Padding(
                 padding: const EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 5.0),
                 child: Row(
