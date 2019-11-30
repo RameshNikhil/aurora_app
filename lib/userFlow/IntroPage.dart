@@ -3,7 +3,6 @@ import './HomeScreen.dart';
 import '../routing/fadeRoute.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import '../routing/SlideBottomRoute.dart';
 
 class IntroPage extends StatelessWidget {
   var locStore;
@@ -92,7 +91,7 @@ class IntroPage extends StatelessWidget {
                               color: Colors.black,
                             )),
                       ),
-                      delay: delayAmount * 9,
+                      delay: delayAmount * 10,
                     ),
                     ShowUp(
                       child: Padding(
@@ -106,7 +105,7 @@ class IntroPage extends StatelessWidget {
                           controller: nameController,
                         ),
                       ),
-                      delay: delayAmount * 11,
+                      delay: delayAmount * 12,
                     ),
                     ShowUp(
                       child: GestureDetector(
@@ -147,7 +146,7 @@ class IntroPage extends StatelessWidget {
                           }
                         },
                       ),
-                      delay: delayAmount * 13,
+                      delay: delayAmount * 14,
                     ),
                   ],
                 ),
