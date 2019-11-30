@@ -82,6 +82,7 @@ class CentralPage extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: <Widget>[
+
                   ShowUp(
                     child: DownloadCellBig(
                       title: "Loan Details",
@@ -90,22 +91,18 @@ class CentralPage extends StatelessWidget {
                     ),
                     delay: delayAmount * 4,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => MessagePageLoanDetails()),
-                      );
-                    },
-                    child: ShowUp(
+                  
+                  ShowUp(
                       child: DownloadCell(
                         title: "Loan Details",
-                        detail: "Help us understand your loan requirements",
+                        detail: "Help us understand your loan hhh",
+                        page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 5,
                     ),
-                  ),
+                   
+                  
+
                   ShowUp(
                     child: DownloadCell(
                       title: "My Savings Journey",
@@ -140,10 +137,12 @@ class CentralPage extends StatelessWidget {
 class DownloadCell extends StatefulWidget {
   var title;
   var detail;
+  var page; 
 
   DownloadCell({
     @required this.title,
     @required this.detail,
+    @required this.page,
   });
 
   @override
@@ -234,7 +233,7 @@ class _DownloadCellState extends State<DownloadCell> {
                 ),
               ),
               onTap: () {
-                //Navigator.push(context, FadeRouteBuilder(page: SingleDownload()));
+                Navigator.push(context, FadeRouteBuilder(page: widget.page));
               },
             ),
           ),

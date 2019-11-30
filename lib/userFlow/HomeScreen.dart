@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       children: <Widget>[
 
-        MessagePage(),
+        //MessagePage(),
         StatsBoard(),
         CentralPage(locStore: locStore,)
 
