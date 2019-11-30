@@ -1,4 +1,5 @@
 import 'package:aurora_app/userFlow/CentralPage.dart';
+import 'package:aurora_app/userFlow/messagePage.dart';
 import 'package:flutter/material.dart';
 import 'StatsBoard.dart';
 
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
       pageSnapping: true,
       physics: BouncingScrollPhysics(),
       children: <Widget>[
+        MessagePage(),
 
         StatsBoard(),
         CentralPage(locStore: locStore,)
