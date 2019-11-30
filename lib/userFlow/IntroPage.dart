@@ -3,6 +3,7 @@ import './HomeScreen.dart';
 import '../routing/fadeRoute.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
+import '../routing/SlideBottomRoute.dart';
 
 class IntroPage extends StatelessWidget {
   @override
@@ -115,8 +116,11 @@ class IntroPage extends StatelessWidget {
                                   );
                                 });
                           } else {
-                            Navigator.pushReplacement(
-                                context, FadeRouteBuilder(page: HomeScreen()));
+
+                            //SlideUp
+                            Navigator.pushReplacement(context, FadeRouteBuilder(page: HomeScreen()));
+
+                          
                           }
                         },
                       ),
