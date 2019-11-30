@@ -1,5 +1,6 @@
 import 'package:aurora_app/userFlow/CentralPage.dart';
 import 'package:flutter/material.dart';
+import 'StatsBoard.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       children: <Widget>[
 
+        StatsBoard(),
         CentralPage(locStore: locStore,)
 
         //Single Pages

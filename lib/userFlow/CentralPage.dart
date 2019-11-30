@@ -14,7 +14,10 @@ class CentralPage extends StatelessWidget {
       colors: <Color>[Color(0xffc39cf4), Color(0xff9D78F3)],
     ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
 
-    var ourList = ["Goal 1", "Goal 2"];
+    var tiles = [
+      {"title": "t1", "subTitle": "78"},
+      {"title": "t2", "subTitle": "69"}
+    ];
 
     //var count = ourList.length;
   
@@ -61,20 +64,12 @@ class CentralPage extends StatelessWidget {
                   ],
                 )),
 
-              //   for(var i; i < ourList.length; i++)
-              //     DownloadCell(
-              //   title: i,
-              //   detail: i,
-              // )
-              
-
-            for (String i in ourList)
-            
-              DownloadCell(
-                title: i,
-                detail: i,
-              )
-
+              ...tiles
+                .map((tile) => DownloadCell(
+                      title: tile["title"],
+                      detail: tile["subTitle"],
+                    ))
+                .toList()
 
           ],
         ),
