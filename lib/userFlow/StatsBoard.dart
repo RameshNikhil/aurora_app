@@ -31,7 +31,7 @@ class StatsBoard extends StatelessWidget {
                           ),
                     ),
                     Text(
-                      "Stats",
+                      "Progress",
                       style: TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
@@ -43,9 +43,25 @@ class StatsBoard extends StatelessWidget {
                 )),
 
 
-            // Padding(
-            //   padding: EdgeInsets.symmetric(horizontal: ),
-            // ),
+
+
+            Padding(
+              padding: EdgeInsets.only(top: 25.0, bottom: 16.0, right: 8.0, left: 8.0),
+              child: Container(
+                child: Image.asset("lib/assets/images/graph.png", height: 400,),
+                decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(23.0),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.25),
+                  blurRadius: 40.0,
+                ),
+              ]),
+              ), 
+
+              
+            ),
         
           
             
