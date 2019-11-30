@@ -17,9 +17,15 @@ class DownloadCellBig extends StatefulWidget {
 
 class _DownloadCellBigState extends State<DownloadCellBig> {
 
+  var welcomeVis = true;
+
   @override
   Widget build(BuildContext context) {
-        return Padding(
+        return Visibility(
+                                visible: welcomeVis,
+                                child: 
+        
+        Padding(
           padding: EdgeInsets.only(bottom: 10.0, left: 6.0, right: 3.0),
           child: Column(
             children: <Widget>[
@@ -30,7 +36,7 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 220), //This makes is PHAT
+                        horizontal: 10.0, vertical: 10), //This makes is PHAT
                 decoration: new BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment(1.0, 1.0),
@@ -58,13 +64,70 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                       new Expanded(
                         child: new Container(
                           child: new Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
 
-                              Text("this is a test"),
+                              Padding(
+                                padding: EdgeInsets.only(left: 15.0, top: 15.0, bottom: 40.0),
+                                child: Text("Welcome!", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                              ),
 
+                              Padding(
+                                padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
+                                child: Text("This is your homescreen.", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                              ),
 
+                              Padding(
+                                padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
+                                child: Text("Tap on a tile to complete the task.", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                              ),
+
+                              Padding(
+                                padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
+                                child: Text("Swipe left to access your stats dashboard.", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                              ),
+
+                              Padding(
+                                padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
+                                child: Text("Swipe right to acces anytime chat", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                              ),
+
+                               GestureDetector(
+                                child:  Padding(
+                                padding: EdgeInsets.only(left: 220.0, right: 8, bottom: 8, top: 8),
+                                child: Container(
+                                  //width: 180, 
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: EdgeInsets.symmetric(vertical: 12.0),
+                                        child:  Text("Done", style: TextStyle(
+                                        fontSize: 15.0,
+                                        
+                                      )),
+                                      ),
+                                      ],
+                                  ),
+                                ),
+                              ),
+                                onTap: (){
+
+                                  setState(() {
+                                    welcomeVis = false; 
+                                  });
+
+                                },
+                              ),
+                              
+
+                             
                               // new Text(widget.title,
                               //     style: Theme.of(context)
                               //         .textTheme
@@ -112,7 +175,7 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
           // ),
         ],
       ),
-    );
+    ));
   }
 }
 
