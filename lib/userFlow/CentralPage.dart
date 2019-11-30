@@ -107,9 +107,12 @@ class CentralPage extends StatelessWidget {
                     child: DownloadCell(
                       title: "My Savings Journey",
                       detail: "fghj",
+                      page: MessagePageSavingsJourney(),
                     ),
                     delay: delayAmount * 5,
                   ),
+
+
                   ShowUp(
                     child: DownloadCell(
                       title: "My XXX Journey",
