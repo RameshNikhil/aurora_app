@@ -87,10 +87,10 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                                 child: Text("Tap on a tile to complete the task.", style: TextStyle(fontSize: 15.0,   ),),
                               ),
 
-                              Padding(
-                                padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
-                                child: Text("Swipe left to access your stats dashboard.", style: TextStyle(fontSize: 15.0,   ),),
-                              ),
+                              // Padding(
+                              //   padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
+                              //   child: Text("Swipe left to access your stats dashboard.", style: TextStyle(fontSize: 15.0,   ),),
+                              // ),
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
