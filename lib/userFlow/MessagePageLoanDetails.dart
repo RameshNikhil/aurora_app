@@ -10,11 +10,12 @@ class MessagePageLoanDetails extends StatefulWidget {
 class _MessagePageState extends State<MessagePageLoanDetails> {
   int delayAmount = 500;
   var messageIndex = 0;
-  final List<String> _prefill = ["How long do you want to take?", "is", "the", "big", "gay"];
+  final List<String> _prefill = ["How long do you want to take?", "When do you need the loan? (dd/mm/yy)", "Have you attempted to get a loan from another organisation but failed?", "Pick a category for what purpose you will be using the loan for? (family, entrepenuership, etc.)"];
   // final List<String> _messages = ["How much monday do you want to burrow?"];
 
   var _messages = [
-    {"text": "How much monday do you want to burrow?", "colored": true},
+    {"text":"Help us better understand your loan requirements by answering a few questions", "colored":true},
+    {"text": "How much monday do you want to borrow? (max: 1000)", "colored": true},
   ];
 
   TextEditingController messageEditingController = TextEditingController();
@@ -31,6 +32,10 @@ class _MessagePageState extends State<MessagePageLoanDetails> {
         _messages.add({"text":_prefill[messageIndex], "colored": true, "delay":500});
         
       });
+
+      if(messageEditingController.text == "entrepenuer" || messageEditingController.text == "entrepenuer" || messageEditingController.text == "invest"){
+        Navigator.pop(context);
+      }
       
       messageEditingController.clear();
       setState((){
@@ -46,6 +51,13 @@ class _MessagePageState extends State<MessagePageLoanDetails> {
       color: Colors.white,
       child: SafeArea(
         child: Scaffold(
+            appBar:  AppBar(
+            elevation: 0,
+            leading:  IconButton(
+            icon:  Icon(Icons.chevron_left),
+            onPressed: () => Navigator.of(context).pop(),
+            ),
+            ),
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: SingleChildScrollView(
