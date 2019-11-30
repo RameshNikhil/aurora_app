@@ -6,7 +6,7 @@ import 'dart:async';
 import '../routing/SlideBottomRoute.dart';
 
 class IntroPage extends StatelessWidget {
-  var locStore; 
+  var locStore;
   IntroPage({this.locStore});
 
   @override
@@ -45,35 +45,27 @@ class IntroPage extends StatelessWidget {
                       delay: delayAmount,
                     ),
                     ShowUp(
-                      
-                        child: Text(
-                            "Welcome to Aurora, a",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              height: 2,
-                              fontSize: 25.0,
-                              //fontFamily: "Montserrat",
-                              color: Colors.black,
-                            )),
-                      
+                      child: Text("Welcome to Aurora, a",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            height: 2,
+                            fontSize: 25.0,
+                            //fontFamily: "Montserrat",
+                            color: Colors.black,
+                          )),
                       delay: delayAmount * 3,
                     ),
-
                     ShowUp(
-                      child: Text(
-                            "simple journey to financial",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              height: 2,
-                              fontSize: 25.0,
-                              //fontFamily: "Montserrat",
-                              color: Colors.black,
-                            )),
-                      
+                      child: Text("simple journey to financial",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            height: 2,
+                            fontSize: 25.0,
+                            //fontFamily: "Montserrat",
+                            color: Colors.black,
+                          )),
                       delay: delayAmount * 5,
                     ),
-
-
                     ShowUp(
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 35.0),
@@ -88,7 +80,6 @@ class IntroPage extends StatelessWidget {
                       ),
                       delay: delayAmount * 7,
                     ),
-
                     ShowUp(
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 190.0),
@@ -103,24 +94,20 @@ class IntroPage extends StatelessWidget {
                       ),
                       delay: delayAmount * 9,
                     ),
-
                     ShowUp(
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 40.0),
                         child: TextField(
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'name...',
-                            ),
-                            style: TextStyle(fontSize: 24.0),
-                            controller: nameController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'name...',
                           ),
-
+                          style: TextStyle(fontSize: 24.0),
+                          controller: nameController,
+                        ),
                       ),
                       delay: delayAmount * 11,
                     ),
-
-
                     ShowUp(
                       child: GestureDetector(
                         child: Icon(Icons.keyboard_arrow_down),
@@ -139,7 +126,7 @@ class IntroPage extends StatelessWidget {
                                         "Please add name before continuing"),
                                     actions: <Widget>[
                                       // usually buttons at the bottom of the dialog
-                                       FlatButton(
+                                      FlatButton(
                                         child: Text("Close"),
                                         onPressed: () {
                                           Navigator.of(context).pop();
@@ -149,14 +136,14 @@ class IntroPage extends StatelessWidget {
                                   );
                                 });
                           } else {
-
                             String text = nameController.text;
 
                             locStore.setItem('userName', text);
                             //SlideUp
-                            Navigator.pushReplacement(context, FadeRouteBuilder(page: HomeScreen(locStore: locStore)));
-
-                          
+                            Navigator.pushReplacement(
+                                context,
+                                FadeRouteBuilder(
+                                    page: HomeScreen(locStore: locStore)));
                           }
                         },
                       ),
