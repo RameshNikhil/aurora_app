@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import '../utilities/showUp.dart';
 
-class MessagePage extends StatefulWidget {
-  MessagePage({Key key}) : super(key: key);
+class MessagePageLoanDetails extends StatefulWidget {
 
   @override
   _MessagePageState createState() => _MessagePageState();
 }
 
-class _MessagePageState extends State<MessagePage> {
+class _MessagePageState extends State<MessagePageLoanDetails> {
   int delayAmount = 500;
   var messageIndex = 0;
   final List<String> _prefill = ["How long do you want to take?", "is", "the", "big", "gay"];

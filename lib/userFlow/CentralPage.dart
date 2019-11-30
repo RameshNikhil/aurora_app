@@ -4,6 +4,7 @@ import 'package:aurora_app/utilities/DCBig.dart';
 import 'package:aurora_app/utilities/showUp.dart';
 import 'package:flutter/material.dart';
 import '../utilities/DCBig.dart';
+import './MessagePageLoanDetails.dart';
 
 class CentralPage extends StatelessWidget {
   var locStore;
@@ -11,7 +12,7 @@ class CentralPage extends StatelessWidget {
 
   int delayAmount = 500;
 
-  var introClosed = false; 
+  var introClosed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class CentralPage extends StatelessWidget {
       colors: <Color>[Color(0xffc39cf4), Color(0xff9D78F3)],
     ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
 
-    //start this from 2 
+    //start this from 2
     var tiles = [
       {"title": "t1", "subTitle": "78"},
       {"title": "t2", "subTitle": "69"},
@@ -30,7 +31,6 @@ class CentralPage extends StatelessWidget {
     ];
 
     //var count = ourList.length;
-  
 
     return new Scaffold(
       appBar: AppBar(elevation: 0),
@@ -42,113 +42,94 @@ class CentralPage extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 5.0),
                 child: Row(
                   children: <Widget>[
-
                     ShowUp(
-                      child:Text(
-                      "Hello, ",
-                      style: TextStyle(
-                          fontSize: 30.0,
-                          // foreground: Paint()..shader = linearGradient
-                          color: Color(0xff8636fa)
-                          ),
-                    ),
-                     delay: delayAmount
-                    ),
-
+                        child: Text(
+                          "Hello, ",
+                          style: TextStyle(
+                              fontSize: 30.0,
+                              // foreground: Paint()..shader = linearGradient
+                              color: Color(0xff8636fa)),
+                        ),
+                        delay: delayAmount),
                     ShowUp(
-                      child:  Text(
-                      userName,
-                      style: TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                          //foreground: Paint()..shader = linearGradient
-                          color: Color(0xff8636fa)
-                          ),
+                      child: Text(
+                        userName,
+                        style: TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                            //foreground: Paint()..shader = linearGradient
+                            color: Color(0xff8636fa)),
+                      ),
+                      delay: delayAmount * 2,
                     ),
-
-                    delay: delayAmount * 2,
-                    ),
-
-                   
-
                   ],
                 )),
-
             Padding(
                 padding: const EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 26.0),
                 child: Row(
                   children: <Widget>[
-
                     ShowUp(
-                      child:  Text(
-                      "Your journey starts here:",
-                      style: TextStyle(
-                          fontSize: 20.0,
-                          foreground: Paint()..shader = linearGradient),
+                      child: Text(
+                        "Your journey starts here:",
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            foreground: Paint()..shader = linearGradient),
+                      ),
+                      delay: delayAmount * 3,
                     ),
-                    delay: delayAmount * 3,
-                    ),
-
                   ],
                 )),
-
-                SingleChildScrollView(
-                  
-                  child: Column(
-                    children: <Widget>[
-                         ShowUp(
-                  child: DownloadCellBig(
-                     title: "Loan Details",
-                    detail: "Help us understand your loan requirements",
-                    trigger: introClosed,
+            SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  ShowUp(
+                    child: DownloadCellBig(
+                      title: "Loan Details",
+                      detail: "Help us understand your loan requirements",
+                      trigger: introClosed,
+                    ),
+                    delay: delayAmount * 4,
                   ),
-                  delay: delayAmount * 4,
-                ),
-
-
-
-                       ShowUp(
-                  child: DownloadCell(
-                     title: "Loan Details",
-                    detail: "Help us understand your loan requirements",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MessagePageLoanDetails()),
+                      );
+                    },
+                    child: ShowUp(
+                      child: DownloadCell(
+                        title: "Loan Details",
+                        detail: "Help us understand your loan requirements",
+                      ),
+                      delay: delayAmount * 5,
+                    ),
                   ),
-                  delay: delayAmount * 5,
-                ),
-
-                    ShowUp(
-                  child: DownloadCell(
-                    title: "container title",
-                    detail: "this is the detail of the container",
+                  ShowUp(
+                    child: DownloadCell(
+                      title: "My Savings Journey",
+                      detail: "fghj",
+                    ),
+                    delay: delayAmount * 5,
                   ),
-                  delay: delayAmount * 5,
-                ),
-
-                    ShowUp(
-                  child: DownloadCell(
-                    title: "container title",
-                    detail: "this is the detail of the container",
+                  ShowUp(
+                    child: DownloadCell(
+                      title: "My XXX Journey",
+                      detail: "this is the detail of the container",
+                    ),
+                    delay: delayAmount * 5,
                   ),
-                  delay: delayAmount * 5,
-                ),
-
-                    ShowUp(
-                  child: DownloadCell(
-                    title: "container title",
-                    detail: "this is the detail of the container",
+                  ShowUp(
+                    child: DownloadCell(
+                      title: "container title",
+                      detail: "this is the detail of the container",
+                    ),
+                    delay: delayAmount * 5,
                   ),
-                  delay: delayAmount * 5,
-                ),
-
-             
-
-
-                    ],
-                    
-                  ),
-                ),
-
-               
-
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -165,27 +146,25 @@ class DownloadCell extends StatefulWidget {
     @required this.detail,
   });
 
-
   @override
   _DownloadCellState createState() => new _DownloadCellState();
 }
 
 class _DownloadCellState extends State<DownloadCell> {
-
   @override
   Widget build(BuildContext context) {
-        return Padding(
-          padding: EdgeInsets.only(bottom: 10.0, left: 6.0, right: 3.0),
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(bottom: 10.0, left: 8.0, right: 8.0),
-                child: InkWell(
-                  child: Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 40), //This makes is PHAT
+    return Padding(
+      padding: EdgeInsets.only(bottom: 10.0, left: 6.0, right: 3.0),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(bottom: 10.0, left: 8.0, right: 8.0),
+            child: InkWell(
+              child: Container(
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0, vertical: 40), //This makes is PHAT
                 decoration: new BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment(1.0, 1.0),
@@ -215,29 +194,24 @@ class _DownloadCellState extends State<DownloadCell> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-
                               Padding(
                                 child: Text(widget.title,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subhead
-                                      .merge(TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold))),
-                                padding: EdgeInsets.only(left: 15.0),
-                              ), 
-
-                              Padding(
-                                child: Text(widget.detail,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .caption
-                                      .merge(TextStyle(color: Colors.white))),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subhead
+                                        .merge(TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold))),
                                 padding: EdgeInsets.only(left: 15.0),
                               ),
-                              
-                               
-
+                              Padding(
+                                child: Text(widget.detail,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .caption
+                                        .merge(TextStyle(color: Colors.white))),
+                                padding: EdgeInsets.only(left: 15.0),
+                              ),
                             ],
                           ),
                         ),
@@ -277,7 +251,7 @@ class _DownloadCellState extends State<DownloadCell> {
 
 // class populateRemainder extends StatelessWidget {
 //   var introClosed;
-//   var tiles; 
+//   var tiles;
 
 //   populateRemainder({this.introClosed, this.tiles});
 
@@ -288,7 +262,6 @@ class _DownloadCellState extends State<DownloadCell> {
 //        return Column(
 //          children: <Widget>[
 
-
 //               ...tiles
 //                 .map((tile) => DownloadCell(
 //                       title: tile["title"],
@@ -298,13 +271,10 @@ class _DownloadCellState extends State<DownloadCell> {
 
 //          ],
 //        );
-     
+
 //     } else {
 //       return Material();
 //     }
-
-   
-
 
 //   }
 // }
