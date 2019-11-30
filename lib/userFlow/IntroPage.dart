@@ -6,12 +6,15 @@ import 'dart:async';
 import '../routing/SlideBottomRoute.dart';
 
 class IntroPage extends StatelessWidget {
+  var locStore; 
+  IntroPage({this.locStore});
+
   @override
   Widget build(BuildContext context) {
     int delayAmount = 500;
 
     PageController _controller = PageController();
-    TextEditingController nameController = new TextEditingController();
+    TextEditingController nameController = TextEditingController();
 
     return PageView(
       controller: _controller,
@@ -101,13 +104,13 @@ class IntroPage extends StatelessWidget {
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(15.0))),
-                                    title: new Text("Missing Name"),
-                                    content: new Text(
+                                    title: Text("Missing Name"),
+                                    content: Text(
                                         "Please add name before continuing"),
                                     actions: <Widget>[
                                       // usually buttons at the bottom of the dialog
-                                      new FlatButton(
-                                        child: new Text("Close"),
+                                       FlatButton(
+                                        child: Text("Close"),
                                         onPressed: () {
                                           Navigator.of(context).pop();
                                         },
@@ -117,8 +120,11 @@ class IntroPage extends StatelessWidget {
                                 });
                           } else {
 
+                            String text = nameController.text;
+
+                            locStore.setItem('userName', text);
                             //SlideUp
-                            Navigator.pushReplacement(context, FadeRouteBuilder(page: HomeScreen()));
+                            Navigator.pushReplacement(context, FadeRouteBuilder(page: HomeScreen(locStore: locStore)));
 
                           
                           }

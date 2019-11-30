@@ -4,12 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './routing/fadeRoute.dart';
 import './userFlow/IntroPage.dart';
+import 'package:localstorage/localstorage.dart';
 
 void main() {
+
+  final LocalStorage storage = LocalStorage('aurora_key');
   
   SystemChrome.setEnabledSystemUIOverlays([]);
 
-  runApp(new MaterialApp(
+  runApp(
+    FutureBuilder(
+      future: storage.ready,
+      builder: (BuildContext context, snapshot) {
+        if (snapshot.data == true) {
+          Map<String, dynamic> data = storage.getItem('key');
+
+          return 
+
+           MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       canvasColor: Colors.white,
@@ -19,16 +31,30 @@ void main() {
         color: Colors.white,
       ),
     ),
-    home: new SplashScreen(),
-  ));
+    home: new SplashScreen(locStore : storage),
+  );
+          
+        } else {
+          return PlainScreen();
+        }
+      },
+    ),
+    
+    
+    
+   );
 }
 
 class SplashScreen extends StatefulWidget {
+  var locStore;
+  SplashScreen({this.locStore});
+
   @override
   _SplashScreenState createState() => new _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
 
   startTime() async {
     var _duration = new Duration(seconds: 2);
@@ -37,7 +63,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.pushReplacement(context, FadeRouteBuilder(page: IntroPage()));
+    Navigator.pushReplacement(context, FadeRouteBuilder(page: IntroPage(locStore: widget.locStore)));
   }
 
   @override
@@ -71,5 +97,15 @@ class _SplashScreenState extends State<SplashScreen> {
                   )),
             )
             ));
+  }
+}
+
+
+class PlainScreen extends StatelessWidget {
+  const PlainScreen({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material();
   }
 }
