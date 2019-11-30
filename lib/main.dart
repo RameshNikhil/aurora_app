@@ -1,11 +1,13 @@
 import 'dart:async';
+import 'package:aurora_app/userFlow/IntroPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './routing/fadeRoute.dart';
-import './userFlow/pageOne.dart';
+import './userFlow/IntroPage.dart';
 
 void main() {
-  //SystemChrome.setEnabledSystemUIOverlays([]);
+  
+  SystemChrome.setEnabledSystemUIOverlays([]);
 
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -35,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.pushReplacement(context, FadeRouteBuilder(page: PageOne()));
+    Navigator.pushReplacement(context, FadeRouteBuilder(page: IntroPage()));
   }
 
   @override
@@ -55,8 +57,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 end: Alignment(-1.0, -1.0),
                 stops: [0.1, 0.9],
                 colors: [
-                  Color(0xff7f41f4),
-                  Color(0xff9e34ba),
+                  Color(0xfffaaacb),
+                  Color(0xff8636fa),
                 ],
               ),
             ),
