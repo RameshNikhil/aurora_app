@@ -179,7 +179,7 @@ class _DownloadCellState extends State<DownloadCell> {
                     ],
                   ),
                   //color: Colors.grey.shade200.withOpacity(0.3),
-                  borderRadius: new BorderRadius.circular(5.0),
+                  borderRadius: new BorderRadius.circular(20.0),
                   // boxShadow: [
                   // new BoxShadow(
                   //   color: Colors.grey[400],
@@ -197,18 +197,29 @@ class _DownloadCellState extends State<DownloadCell> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              new Text(widget.title,
+
+                              Padding(
+                                child: Text(widget.title,
                                   style: Theme.of(context)
                                       .textTheme
                                       .subhead
                                       .merge(TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold))),
-                              new Text(widget.detail,
+                                padding: EdgeInsets.only(left: 15.0),
+                              ), 
+
+                              Padding(
+                                child: Text(widget.detail,
                                   style: Theme.of(context)
                                       .textTheme
                                       .caption
                                       .merge(TextStyle(color: Colors.white))),
+                                padding: EdgeInsets.only(left: 15.0),
+                              ),
+                              
+                               
+
                             ],
                           ),
                         ),

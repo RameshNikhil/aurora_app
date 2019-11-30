@@ -30,19 +30,20 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 10.0, vertical: 80), //This makes is PHAT
+                        horizontal: 10.0, vertical: 220), //This makes is PHAT
                 decoration: new BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment(1.0, 1.0),
                     end: Alignment(-1.0, -1.0),
                     stops: [0.1, 0.9],
                     colors: [
-                      Color(0xffc39cf4).withOpacity(0.90),
-                      Color(0xff9D78F3).withOpacity(0.90),
+                      Color(0xfff2f2f2),
+                      Color(0xffc1c1c1),
+                      
                     ],
                   ),
                   //color: Colors.grey.shade200.withOpacity(0.3),
-                  borderRadius: new BorderRadius.circular(5.0),
+                  borderRadius: new BorderRadius.circular(20.0),
                   // boxShadow: [
                   // new BoxShadow(
                   //   color: Colors.grey[400],
@@ -60,18 +61,24 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              new Text(widget.title,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subhead
-                                      .merge(TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold))),
-                              new Text(widget.detail,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .caption
-                                      .merge(TextStyle(color: Colors.white))),
+
+                              Text("this is a test"),
+
+
+                              // new Text(widget.title,
+                              //     style: Theme.of(context)
+                              //         .textTheme
+                              //         .subhead
+                              //         .merge(TextStyle(
+                              //             color: Colors.white,
+                              //             fontWeight: FontWeight.bold))),
+                              // new Text(widget.detail,
+                              //     style: Theme.of(context)
+                              //         .textTheme
+                              //         .caption
+                              //         .merge(TextStyle(color: Colors.white))),
+
+
                             ],
                           ),
                         ),
