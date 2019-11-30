@@ -38,59 +38,89 @@ class IntroPage extends StatelessWidget {
                         padding: EdgeInsets.only(bottom: 35.0),
                         child: Text("Hi,",
                             style: TextStyle(
-                              fontSize: 27.0,
+                              fontSize: 25.0,
                               color: Colors.black,
                             )),
                       ),
                       delay: delayAmount,
                     ),
                     ShowUp(
-                      child: Padding(
-                        padding: EdgeInsets.only(bottom: 35.0),
+                      
                         child: Text(
-                            "Welcome to Aurora, a simple journey to financial independence.",
+                            "Welcome to Aurora, a",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               height: 2,
-                              fontSize: 27.0,
+                              fontSize: 25.0,
+                              //fontFamily: "Montserrat",
+                              color: Colors.black,
+                            )),
+                      
+                      delay: delayAmount * 3,
+                    ),
+
+                    ShowUp(
+                      child: Text(
+                            "simple journey to financial",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              height: 2,
+                              fontSize: 25.0,
+                              //fontFamily: "Montserrat",
+                              color: Colors.black,
+                            )),
+                      
+                      delay: delayAmount * 5,
+                    ),
+
+
+                    ShowUp(
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: 35.0),
+                        child: Text("independence.",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              height: 2,
+                              fontSize: 25.0,
                               //fontFamily: "Montserrat",
                               color: Colors.black,
                             )),
                       ),
-                      delay: delayAmount * 3,
+                      delay: delayAmount * 7,
                     ),
+
                     ShowUp(
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 190.0),
-                        child: Text("Let's start with your name",
+                        child: Text("Let's start with your name.",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               height: 2,
-                              fontSize: 27.0,
+                              fontSize: 25.0,
                               //fontFamily: "Montserrat",
                               color: Colors.black,
                             )),
                       ),
-                      delay: delayAmount * 6,
+                      delay: delayAmount * 9,
                     ),
+
                     ShowUp(
                       child: Padding(
-                        padding:
-                            const EdgeInsets.fromLTRB(0.0, 16.0, 0.0, 40.0),
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: TextField(
+                        padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 40.0),
+                        child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Name...',
+                              hintText: 'name...',
                             ),
                             style: TextStyle(fontSize: 24.0),
                             controller: nameController,
                           ),
-                        ),
+
                       ),
-                      delay: delayAmount * 9,
+                      delay: delayAmount * 11,
                     ),
+
+
                     ShowUp(
                       child: GestureDetector(
                         child: Icon(Icons.keyboard_arrow_down),
@@ -130,7 +160,7 @@ class IntroPage extends StatelessWidget {
                           }
                         },
                       ),
-                      delay: delayAmount * 11,
+                      delay: delayAmount * 13,
                     ),
                   ],
                 ),

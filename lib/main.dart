@@ -7,9 +7,8 @@ import './userFlow/IntroPage.dart';
 import 'package:localstorage/localstorage.dart';
 
 void main() {
-
   final LocalStorage storage = LocalStorage('aurora_key');
-  
+
   SystemChrome.setEnabledSystemUIOverlays([]);
 
   runApp(
@@ -18,31 +17,24 @@ void main() {
       builder: (BuildContext context, snapshot) {
         if (snapshot.data == true) {
           Map<String, dynamic> data = storage.getItem('key');
-
-          return 
-
-           MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      canvasColor: Colors.white,
-      primaryColor: Colors.white,
-      fontFamily: 'Montserrat',
-      appBarTheme: AppBarTheme(
-        color: Colors.white,
-      ),
-    ),
-    home: new SplashScreen(locStore : storage),
-  );
-          
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              canvasColor: Colors.white,
+              primaryColor: Colors.white,
+              fontFamily: 'Montserrat',
+              appBarTheme: AppBarTheme(
+                color: Colors.white,
+              ),
+            ),
+            home: new SplashScreen(locStore: storage),
+          );
         } else {
           return PlainScreen();
         }
       },
     ),
-    
-    
-    
-   );
+  );
 }
 
 class SplashScreen extends StatefulWidget {
@@ -54,8 +46,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-
   startTime() async {
     var _duration = new Duration(seconds: 2);
 
@@ -63,7 +53,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.pushReplacement(context, FadeRouteBuilder(page: IntroPage(locStore: widget.locStore)));
+    Navigator.pushReplacement(
+        context, FadeRouteBuilder(page: IntroPage(locStore: widget.locStore)));
   }
 
   @override
@@ -95,11 +86,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: Colors.white,
                     fontSize: 50,
                   )),
-            )
-            ));
+            )));
   }
 }
-
 
 class PlainScreen extends StatelessWidget {
   const PlainScreen({Key key}) : super(key: key);
