@@ -50,9 +50,6 @@ class StatsBoard extends StatelessWidget {
 
 
 
-
-            
-
 ShowUp(
   child: Padding(
               padding: EdgeInsets.only(top: 30.0, bottom: 16.0, right: 8.0, left: 8.0),
@@ -75,41 +72,43 @@ ShowUp(
               
             ),
 ),
-            Padding(
-      padding: EdgeInsets.all(0.0),
-      child: GridView.count(
-        crossAxisCount: 2,
-        padding: EdgeInsets.fromLTRB(16.0, 28.0, 16.0, 16.0),
-        childAspectRatio: 8.0 / 10.5,
-        mainAxisSpacing: 32.0,
-        crossAxisSpacing: 16.0,
-        children: <Widget>[
 
-          //cell 1 and 2 
 
-           ShowUp(
-                    child: EmptyCell(
-                      title: "Loan Details",
-                      detail: "Help us understand your loan requirements",
-                      //trigger: introClosed,
-                    ),
-                    delay: delayAmount * 2,
-                  ),
+    //         Padding(
+    //   padding: EdgeInsets.all(0.0),
+    //   child: GridView.count(
+    //     crossAxisCount: 2,
+    //     padding: EdgeInsets.fromLTRB(16.0, 28.0, 16.0, 16.0),
+    //     childAspectRatio: 8.0 / 10.5,
+    //     mainAxisSpacing: 32.0,
+    //     crossAxisSpacing: 16.0,
+    //     children: <Widget>[
 
-           ShowUp(
-                    child: EmptyCell(
-                      title: "Loan Details",
-                      detail: "Help us understand your loan requirements",
-                      //trigger: introClosed,
-                    ),
-                    delay: delayAmount * 3,
-                  ),
+    //       //cell 1 and 2 
+
+    //       //  ShowUp(
+    //       //           child: EmptyCell(
+    //       //             title: "Loan Details",
+    //       //             detail: "Help us understand your loan requirements",
+    //       //             //trigger: introClosed,
+    //       //           ),
+    //       //           delay: delayAmount * 2,
+    //       //         ),
+
+    //       //  ShowUp(
+    //       //           child: EmptyCell(
+    //       //             title: "Loan Details",
+    //       //             detail: "Help us understand your loan requirements",
+    //       //             //trigger: introClosed,
+    //       //           ),
+    //       //           delay: delayAmount * 3,
+    //       //         ),
 
 
          
-        ],
-      ),
-    ),
+    //     ],
+    //   ),
+    // ),
         
           
             

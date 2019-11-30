@@ -9,8 +9,6 @@ import 'package:localstorage/localstorage.dart';
 void main() {
   final LocalStorage storage = LocalStorage('aurora_key');
 
-  SystemChrome.setEnabledSystemUIOverlays([]);
-
   runApp(
     FutureBuilder(
       future: storage.ready,
@@ -35,6 +33,8 @@ void main() {
       },
     ),
   );
+
+  SystemChrome.setEnabledSystemUIOverlays([]);
 }
 
 class SplashScreen extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:aurora_app/userFlow/CentralPage.dart';
-import 'package:aurora_app/userFlow/messagePage.dart';
 import 'package:flutter/material.dart';
 import 'StatsBoard.dart';
+import './MainMessagePage.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     PageController _homePageController = PageController(
-      initialPage: 2,
+      initialPage: 1,
       keepPage: false,
     );
 
@@ -26,8 +26,8 @@ class HomeScreen extends StatelessWidget {
 
         //MessagePage(),
         StatsBoard(),
-        CentralPage(locStore: locStore,)
-        //MainMessagePage(),
+        CentralPage(locStore: locStore,),
+        MainMessagePage(),
 
         //Single Pages
        

@@ -30,7 +30,7 @@ class IntroPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.fromLTRB(28.0, 60.0, 28.0, 16.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     ShowUp(
                       child: Padding(
@@ -45,7 +45,7 @@ class IntroPage extends StatelessWidget {
                     ),
                     ShowUp(
                       child: Text("Welcome to Aurora, a",
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.start,
                           style: TextStyle(
                             height: 2,
                             fontSize: 25.0,
@@ -56,7 +56,7 @@ class IntroPage extends StatelessWidget {
                     ),
                     ShowUp(
                       child: Text("simple journey to financial",
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.start,
                           style: TextStyle(
                             height: 2,
                             fontSize: 25.0,
@@ -69,7 +69,7 @@ class IntroPage extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.only(bottom: 35.0),
                         child: Text("independence.",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.start,
                             style: TextStyle(
                               height: 2,
                               fontSize: 25.0,
@@ -81,9 +81,9 @@ class IntroPage extends StatelessWidget {
                     ),
                     ShowUp(
                       child: Padding(
-                        padding: EdgeInsets.only(bottom: 190.0),
+                        padding: EdgeInsets.only(bottom: 190.0,),
                         child: Text("Let's start with your name.",
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.start,
                             style: TextStyle(
                               height: 2,
                               fontSize: 25.0,

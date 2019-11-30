@@ -101,33 +101,31 @@ class CentralPage extends StatelessWidget {
                       ),
                       delay: delayAmount * 5,
                     ),
+
+
+                    ShowUp(
+                      child: DownloadCell(
+                        title: "Loan Details",
+                        detail: "Help us understand your loan hhh",
+                        page: MessagePageLoanDetails(),
+                      ),
+                      delay: delayAmount * 6,
+                    ),
+                   
+
+
+                   ShowUp(
+                      child: DownloadCell(
+                        title: "Loan Details",
+                        detail: "Help us understand your loan hhh",
+                        page: MessagePageLoanDetails(),
+                      ),
+                      delay: delayAmount * 7,
+                    ),
+                   
                    
                   
 
-                  // ShowUp(
-                  //   child: DownloadCell(
-                  //     title: "My Savings Journey",
-                  //     detail: "fghj",
-                  //     page: MessagePageSavingsJourney(),
-                  //   ),
-                  //   delay: delayAmount * 5,
-                  // ),
-
-
-                  // ShowUp(
-                  //   child: DownloadCell(
-                  //     title: "My XXX Journey",
-                  //     detail: "this is the detail of the container",
-                  //   ),
-                  //   delay: delayAmount * 5,
-                  // ),
-                  // ShowUp(
-                  //   child: DownloadCell(
-                  //     title: "container title",
-                  //     detail: "this is the detail of the container",
-                  //   ),
-                  //   delay: delayAmount * 5,
-                  // ),
 
 
 
