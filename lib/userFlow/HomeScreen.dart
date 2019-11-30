@@ -1,3 +1,4 @@
+import 'package:aurora_app/userFlow/CentralPage.dart';
 import 'package:flutter/material.dart';
 
 
@@ -8,9 +9,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    var userName = locStore.getItem('userName');
-    print(userName);
 
     PageController _homePageController = PageController(
       initialPage: 1,
@@ -23,6 +21,8 @@ class HomeScreen extends StatelessWidget {
       pageSnapping: true,
       physics: BouncingScrollPhysics(),
       children: <Widget>[
+
+        CentralPage(locStore: locStore,)
 
         //Single Pages
        
