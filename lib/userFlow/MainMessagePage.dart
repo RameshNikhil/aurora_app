@@ -53,18 +53,10 @@ class _MessagePageState extends State<MainMessagePage> {
       }
        else if(messageEditingController.text.contains("tips")){
             _messages.add({"text":"what would you like to learn about \n ask about loans, saving money, increasing your income etc." , "colored": true, "delay":500});
-      }
-       else if(messageEditingController.text.contains("aaaaaa")){
-
-      }
-       else if(messageEditingController.text.contains("loans")){
+      } else if(messageEditingController.text.contains("loans")){
             _messages.add({"text":"Personal Loands \n https://www.moneysmart.gov.au/borrowing-and-credit/other-types-of-credit/personal-loans \n \n Payday Loans \n https://www.moneysmart.gov.au/borrowing-and-credit/payday-loans" , "colored": true, "delay":500});
-      }
-       else if(messageEditingController.text.contains("")){
-
-      }
-      else{
-
+      } else {
+        _messages.add({"text":"Hey! Try asking me about your savings, tips for saving, or your next task! Click the ? button on the top left for more." , "colored": true, "delay":500});
       }
 
     
@@ -168,7 +160,7 @@ class _MessagePageState extends State<MainMessagePage> {
           child: TextField(
           decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: 'ask me anything...',
+          hintText: 'Ask me anything...',
         ),
         style: TextStyle(fontSize: 17.0),
         controller: messageEditingController,
