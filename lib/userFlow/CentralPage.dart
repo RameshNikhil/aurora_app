@@ -14,7 +14,13 @@ class CentralPage extends StatelessWidget {
       colors: <Color>[Color(0xffc39cf4), Color(0xff9D78F3)],
     ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
 
-    var ourList = ["t1", "t2"];
+    var tiles = [
+      {"title": "t1", "subTitle": "78"},
+      {"title": "t2", "subTitle": "69"}
+    ];
+
+    //var count = ourList.length;
+  
 
     return new Scaffold(
       appBar: AppBar(elevation: 0),
@@ -30,19 +36,23 @@ class CentralPage extends StatelessWidget {
                       "Hello, ",
                       style: TextStyle(
                           fontSize: 30.0,
-                          foreground: Paint()..shader = linearGradient),
+                          // foreground: Paint()..shader = linearGradient
+                          color: Color(0xff8636fa)
+                          ),
                     ),
                     Text(
                       userName,
                       style: TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
-                          foreground: Paint()..shader = linearGradient),
+                          //foreground: Paint()..shader = linearGradient
+                          color: Color(0xff8636fa)
+                          ),
                     ),
                   ],
                 )),
             Padding(
-                padding: const EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 16.0),
+                padding: const EdgeInsets.fromLTRB(16.0, 0.0, 0.0, 26.0),
                 child: Row(
                   children: <Widget>[
                     Text(
@@ -53,11 +63,14 @@ class CentralPage extends StatelessWidget {
                     ),
                   ],
                 )),
-            for (String i in ourList)
-              DownloadCell(
-                title: i,
-                detail: i,
-              )
+
+              ...tiles
+                .map((tile) => DownloadCell(
+                      title: tile["title"],
+                      detail: tile["subTitle"],
+                    ))
+                .toList()
+
           ],
         ),
       ),
@@ -83,7 +96,7 @@ class _DownloadCellState extends State<DownloadCell> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 10.0, left: 8.0, right: 8.0),
+      padding: EdgeInsets.only(bottom: 10.0, left: 6.0, right: 3.0),
       child: Column(
         children: <Widget>[
           Padding(
@@ -100,8 +113,8 @@ class _DownloadCellState extends State<DownloadCell> {
                     end: Alignment(-1.0, -1.0),
                     stops: [0.1, 0.9],
                     colors: [
-                      Color(0xffc39cf4).withOpacity(0.6),
-                      Color(0xff9D78F3).withOpacity(0.6),
+                      Color(0xffc39cf4).withOpacity(0.90),
+                      Color(0xff9D78F3).withOpacity(0.90),
                     ],
                   ),
                   //color: Colors.grey.shade200.withOpacity(0.3),
@@ -164,7 +177,7 @@ class _DownloadCellState extends State<DownloadCell> {
           Icon(
             Icons.arrow_downward,
             size: 15.0,
-            color: Colors.black,
+            color: Colors.grey,
           ),
         ],
       ),
