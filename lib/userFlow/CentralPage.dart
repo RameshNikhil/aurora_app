@@ -20,6 +20,8 @@ class CentralPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var userName = locStore.getItem('userName');
 
+    var flip = false; 
+
     //Shader is for gradient text
     final Shader linearGradient = LinearGradient(
       colors: <Color>[Color(0xffc39cf4), Color(0xff9D78F3)],
@@ -87,9 +89,10 @@ class CentralPage extends StatelessWidget {
 
                   ShowUp(
                     child: DownloadCellBig(
-                      title: "Loan Details",
-                      detail: "Help us understand your loan requirements",
+                      title: "xyz",
+                      detail: "xyz",
                       trigger: introClosed,
+                      flip: flip,
                     ),
                     delay: delayAmount * 4,
                   ),
@@ -104,13 +107,27 @@ class CentralPage extends StatelessWidget {
                     ),
 
 
+                    Visibility(
+                      visible: flip,
+                      child:  ShowUp(
+                      child: SignUpCard(
+                      locStore: locStore,
+                    ),                   
+                      delay: delayAmount * 6,
+                    ),
+                    ), 
+
+                    
+
+
+
                     ShowUp(
                       child: DownloadCell(
                         title: "Loan Details",
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
                       ),
-                      delay: delayAmount * 6,
+                      delay: delayAmount * 7,
                     ),
                    
 
@@ -121,15 +138,11 @@ class CentralPage extends StatelessWidget {
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
                       ),
-                      delay: delayAmount * 7,
+                      delay: delayAmount * 8,
                     ),
 
-
-                    SignUpCard(
-                      locStore: locStore,
-                      
-                    ),
                    
+                    
                    
                   
 

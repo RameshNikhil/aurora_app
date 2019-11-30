@@ -5,11 +5,13 @@ class DownloadCellBig extends StatefulWidget {
   var title;
   var detail;
   var trigger; 
+  var flip; 
 
   DownloadCellBig({
     @required this.title,
     @required this.detail,
-    @required this.trigger
+    @required this.trigger,
+    @required this.flip
   });
 
 
@@ -121,12 +123,13 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                                 ),
                               ),
 
-                              
+
                                 onTap: (){
 
                                   setState(() {
                                     welcomeVis = false; 
                                     widget.trigger = true; 
+                                    widget.flip = true; 
 
                                   });
 

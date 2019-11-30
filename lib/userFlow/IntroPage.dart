@@ -81,7 +81,7 @@ class IntroPage extends StatelessWidget {
                     ),
                     ShowUp(
                       child: Padding(
-                        padding: EdgeInsets.only(bottom: 190.0,),
+                        padding: EdgeInsets.only(bottom: 170.0,),
                         child: Text("Let's start with your name.",
                             textAlign: TextAlign.start,
                             style: TextStyle(

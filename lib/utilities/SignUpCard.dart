@@ -162,8 +162,16 @@ class _SignUpCard extends State<SignUpCard> {
                           ),
 
                           onTap: (){
+                            setState(() {
+
                             widget.locStore.setItem("phoneNum", phoneController.text);
                             widget.locStore.setItem("bankYes", bankYesController.text);
+
+                            welcomeVis = false; 
+
+                              
+                            });
+
                           },
                         ),
                             ],
