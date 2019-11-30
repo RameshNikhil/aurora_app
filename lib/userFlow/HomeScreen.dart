@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     PageController _homePageController = PageController(
-      initialPage: 1,
+      initialPage: 2,
       keepPage: false,
     );
 
@@ -23,8 +23,8 @@ class HomeScreen extends StatelessWidget {
       pageSnapping: true,
       physics: BouncingScrollPhysics(),
       children: <Widget>[
-        MessagePage(),
 
+        MessagePage(),
         StatsBoard(),
         CentralPage(locStore: locStore,)
 

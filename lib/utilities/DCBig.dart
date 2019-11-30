@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 class DownloadCellBig extends StatefulWidget {
   var title;
   var detail;
+  var trigger; 
 
   DownloadCellBig({
     @required this.title,
     @required this.detail,
+    @required this.trigger
   });
 
 
@@ -70,32 +72,32 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, top: 15.0, bottom: 40.0),
-                                child: Text("Welcome!", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                                child: Text("Welcome!", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold ),),
                               ),
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
-                                child: Text("This is your homescreen.", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                                child: Text("This is your homescreen.", style: TextStyle(fontSize: 15.0,  ),),
                               ),
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
-                                child: Text("Tap on a tile to complete the task.", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                                child: Text("Tap on a tile to complete the task.", style: TextStyle(fontSize: 15.0,   ),),
                               ),
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
-                                child: Text("Swipe left to access your stats dashboard.", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                                child: Text("Swipe left to access your stats dashboard.", style: TextStyle(fontSize: 15.0,   ),),
                               ),
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, bottom: 40.0),
-                                child: Text("Swipe right to acces anytime chat", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w600,),),
+                                child: Text("Swipe right to access anytime chat", style: TextStyle(fontSize: 15.0,   ),),
                               ),
 
                                GestureDetector(
                                 child:  Padding(
-                                padding: EdgeInsets.only(left: 220.0, right: 8, bottom: 8, top: 8),
+                                padding: EdgeInsets.only(left: 220.0, right: 8, bottom: 8, top: 0),
                                 child: Container(
                                   //width: 180, 
                                   decoration: BoxDecoration(
@@ -110,6 +112,7 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
                                         padding: EdgeInsets.symmetric(vertical: 12.0),
                                         child:  Text("Done", style: TextStyle(
                                         fontSize: 15.0,
+                                        fontWeight: FontWeight.bold
                                         
                                       )),
                                       ),
@@ -121,6 +124,8 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
 
                                   setState(() {
                                     welcomeVis = false; 
+                                    widget.trigger = true; 
+
                                   });
 
                                 },

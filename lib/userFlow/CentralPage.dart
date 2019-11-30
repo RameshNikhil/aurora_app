@@ -1,4 +1,5 @@
 import 'package:aurora_app/routing/fadeRoute.dart';
+import 'package:aurora_app/userFlow/IntroPage.dart';
 import 'package:aurora_app/utilities/DCBig.dart';
 import 'package:aurora_app/utilities/showUp.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,8 @@ class CentralPage extends StatelessWidget {
   CentralPage({this.locStore});
 
   int delayAmount = 500;
+
+  var introClosed = false; 
 
   @override
   Widget build(BuildContext context) {
@@ -94,34 +97,50 @@ class CentralPage extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
 
+                         ShowUp(
+                  child: DownloadCellBig(
+                     title: "container title",
+                    detail: "this is the detail of the container",
+                    trigger: introClosed,
+                  ),
+                  delay: delayAmount * 4,
+                ),
+
+
 
                        ShowUp(
                   child: DownloadCell(
                     title: "container title",
                     detail: "this is the detail of the container",
                   ),
-                  delay: delayAmount * 4,
+                  delay: delayAmount * 5,
                 ),
 
-                ShowUp(
-                  child: DownloadCellBig(
-                     title: "container title",
+                    ShowUp(
+                  child: DownloadCell(
+                    title: "container title",
                     detail: "this is the detail of the container",
                   ),
                   delay: delayAmount * 5,
-                )
+                ),
 
-            
+                    ShowUp(
+                  child: DownloadCell(
+                    title: "container title",
+                    detail: "this is the detail of the container",
+                  ),
+                  delay: delayAmount * 5,
+                ),
 
+                    ShowUp(
+                  child: DownloadCell(
+                    title: "container title",
+                    detail: "this is the detail of the container",
+                  ),
+                  delay: delayAmount * 5,
+                ),
 
-              // ...tiles
-              //   .map((tile) => DownloadCell(
-              //         title: tile["title"],
-              //         detail: tile["subTitle"],
-              //       ))
-              //   .toList()
-
-
+             
 
 
                     ],
@@ -257,3 +276,36 @@ class _DownloadCellState extends State<DownloadCell> {
   }
 }
 
+// class populateRemainder extends StatelessWidget {
+//   var introClosed;
+//   var tiles; 
+
+//   populateRemainder({this.introClosed, this.tiles});
+
+//   @override
+//   Widget build(BuildContext context) {
+
+//     if (introClosed == true) {
+//        return Column(
+//          children: <Widget>[
+
+
+//               ...tiles
+//                 .map((tile) => DownloadCell(
+//                       title: tile["title"],
+//                       detail: tile["subTitle"],
+//                     ))
+//                 .toList()
+
+//          ],
+//        );
+     
+//     } else {
+//       return Material();
+//     }
+
+   
+
+
+//   }
+// }
