@@ -23,9 +23,6 @@ class HomeScreen extends StatelessWidget {
       pageSnapping: true,
       physics: BouncingScrollPhysics(),
       children: <Widget>[
-
-        //MessagePage(),
-        StatsBoard(),
         CentralPage(locStore: locStore,),
         MainMessagePage(homePageController: _homePageController),
 
