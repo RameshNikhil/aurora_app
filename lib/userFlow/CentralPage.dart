@@ -102,7 +102,7 @@ class CentralPage extends StatelessWidget {
                   ShowUp(
                       child: DownloadCell(
                         title: "1. Loan Details",
-                        detail: "Help us understand your loan hhh",
+                        detail: "Help us understand your financial and non-financial goals.",
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 5,
@@ -124,7 +124,7 @@ class CentralPage extends StatelessWidget {
                     ShowUp(
                       child: DCX(
                         title: "2. Your Savings Journey ",
-                        detail: "Lets get set up on establishing good savings habits",
+                        detail: "Monitor your progress on the savings dashboard towards your goals",
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 7,
@@ -144,8 +144,8 @@ class CentralPage extends StatelessWidget {
 
                     ShowUp(
                       child: DCX(
-                        title: "4. Loan Details",
-                        detail: "Help us understand your loan hhh",
+                        title: "4. Family Planning",
+                        detail: "Plan goals for your family and personal life so that yuou can invest for a better future.",
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 9,
@@ -154,8 +154,8 @@ class CentralPage extends StatelessWidget {
 
                   ShowUp(
                       child: DownloadCell(
-                        title: "5. Loan Details",
-                        detail: "Help us understand your loan hhh",
+                        title: "5. Your Life Goals Dashboard",
+                        detail: "Track your progress towared financial independance, family planning andf entrepreneurship in this dashboard.",
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 10,

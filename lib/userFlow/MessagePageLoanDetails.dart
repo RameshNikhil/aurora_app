@@ -111,7 +111,7 @@ class _MessagePageState extends State<MessagePageLoanDetails> {
           child: TextField(
           decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: 'ask me anything...',
+          hintText: 'Type here...',
         ),
         style: TextStyle(fontSize: 17.0),
         controller: messageEditingController,

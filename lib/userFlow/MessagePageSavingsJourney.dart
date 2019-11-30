@@ -99,7 +99,7 @@ class _MessagePageSavingsJourneyState extends State<MessagePageSavingsJouney> {
           child: TextField(
           decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: 'ask me anything...',
+          hintText: 'Type here...',
         ),
         style: TextStyle(fontSize: 17.0),
         controller: messageEditingController,
