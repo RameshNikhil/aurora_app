@@ -2,6 +2,7 @@ import 'package:aurora_app/routing/fadeRoute.dart';
 import 'package:aurora_app/userFlow/IntroPage.dart';
 import 'package:aurora_app/userFlow/StatsBoard.dart';
 import 'package:aurora_app/utilities/DCBig.dart';
+import 'package:aurora_app/utilities/DCX.dart';
 import 'package:aurora_app/utilities/SignUpCard.dart';
 import 'package:aurora_app/utilities/showUp.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +101,7 @@ class CentralPage extends StatelessWidget {
                   
                   ShowUp(
                       child: DownloadCell(
-                        title: "Loan Details",
+                        title: "1. Loan Details",
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
                       ),
@@ -108,24 +109,22 @@ class CentralPage extends StatelessWidget {
                     ),
 
 
-                    Visibility(
-                      visible: flip,
-                      child:  ShowUp(
+                   ShowUp(
                       child: SignUpCard(
                       locStore: locStore,
                     ),                   
                       delay: delayAmount * 6,
                     ),
-                    ), 
+                    
 
                     
 
 
 
                     ShowUp(
-                      child: DownloadCell(
-                        title: "Loan Details",
-                        detail: "Help us understand your loan hhh",
+                      child: DCX(
+                        title: "2. Your Savings Journey ",
+                        detail: "Lets get set up on establishing good savings habits",
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 7,
@@ -135,8 +134,8 @@ class CentralPage extends StatelessWidget {
 
                    ShowUp(
                       child: DownloadCell(
-                        title: "Loan Details",
-                        detail: "Help us understand your loan hhh",
+                        title: "3. Your Entrepreneurial Journey ",
+                        detail: "Explore the options you have to expand professionally ",
                         page: MessagePageLoanDetails(),
                       ),
                       delay: delayAmount * 8,
@@ -144,8 +143,8 @@ class CentralPage extends StatelessWidget {
 
 
                     ShowUp(
-                      child: DownloadCell(
-                        title: "Loan Details",
+                      child: DCX(
+                        title: "4. Loan Details",
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
                       ),
@@ -155,7 +154,7 @@ class CentralPage extends StatelessWidget {
 
                   ShowUp(
                       child: DownloadCell(
-                        title: "Loan Details",
+                        title: "5. Loan Details",
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
                       ),
@@ -209,7 +208,7 @@ class _DownloadCellState extends State<DownloadCell> {
       child: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(bottom: 10.0, left: 8.0, right: 8.0),
+            padding: EdgeInsets.only(bottom: 10.0, left: 8.0, right: 8.0), //this makes is THIN
             child: InkWell(
               child: Container(
                 margin:
