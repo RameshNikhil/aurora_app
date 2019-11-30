@@ -104,6 +104,7 @@ class CentralPage extends StatelessWidget {
                         title: "1. Loan Details",
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
+                        iconSize: 15.0,
                       ),
                       delay: delayAmount * 5,
                     ),
@@ -137,6 +138,7 @@ class CentralPage extends StatelessWidget {
                         title: "3. Your Entrepreneurial Journey ",
                         detail: "Explore the options you have to expand professionally ",
                         page: MessagePageLoanDetails(),
+                        iconSize: 15.0,
                       ),
                       delay: delayAmount * 8,
                     ),
@@ -157,6 +159,7 @@ class CentralPage extends StatelessWidget {
                         title: "5. Loan Details",
                         detail: "Help us understand your loan hhh",
                         page: MessagePageLoanDetails(),
+                        iconSize: 0.0,
                       ),
                       delay: delayAmount * 10,
                     ),
@@ -189,11 +192,13 @@ class DownloadCell extends StatefulWidget {
   var title;
   var detail;
   var page; 
+  var iconSize;
 
   DownloadCell({
     @required this.title,
     @required this.detail,
     @required this.page,
+    @required this.iconSize
   });
 
   @override
@@ -290,7 +295,7 @@ class _DownloadCellState extends State<DownloadCell> {
           ),
           Icon(
             Icons.arrow_downward,
-            size: 15.0,
+            size: widget.iconSize,
             color: Colors.grey,
           ),
         ],

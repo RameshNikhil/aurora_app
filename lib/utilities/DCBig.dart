@@ -74,7 +74,7 @@ class _DownloadCellBigState extends State<DownloadCellBig> {
 
                               Padding(
                                 padding: EdgeInsets.only(left: 15.0, top: 15.0, bottom: 40.0),
-                                child: Text("Welcome!", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold ),),
+                                child: Text("Welcome!", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold ),),
                               ),
 
                               Padding(

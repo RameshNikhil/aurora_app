@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../utilities/showUp.dart';
 
 class MainMessagePage extends StatefulWidget {
+  var homePageController;
+  MainMessagePage({this.homePageController});
 
   @override
   _MessagePageState createState() => _MessagePageState();
@@ -77,9 +79,16 @@ class _MessagePageState extends State<MainMessagePage> {
         child: Scaffold(
           
             appBar:  AppBar(
+               leading:  IconButton(
+            icon:  Icon(Icons.chevron_left),
+            onPressed: () {
+              widget.homePageController.previousPage(duration: Duration(seconds: 1), curve: Curves.ease);
+            }
+            ),
               actions: <Widget>[
+
            new IconButton(
-             icon: new Icon(Icons.help_outline),
+             icon: new Icon(Icons.blur_on),
             onPressed: () {
               showDialog(
         context: context,
@@ -104,6 +113,11 @@ class _MessagePageState extends State<MainMessagePage> {
         });
             },
            ),
+
+
+
+
+
          ],
             elevation: 0,
             ),

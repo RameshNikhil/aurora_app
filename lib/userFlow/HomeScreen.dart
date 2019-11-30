@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
         //MessagePage(),
         StatsBoard(),
         CentralPage(locStore: locStore,),
-        MainMessagePage(),
+        MainMessagePage(homePageController: _homePageController),
 
         //Single Pages
        
