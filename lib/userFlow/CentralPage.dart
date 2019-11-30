@@ -127,7 +127,7 @@ class CentralPage extends StatelessWidget {
                       child: DCX(
                         title: "2. Your Savings Journey ",
                         detail: "Monitor your progress on the savings dashboard towards your goals",
-                        page: MessagePageLoanDetails(),
+                        page: StatsBoard(),
                       ),
                       delay: delayAmount * 7,
                     ),
