@@ -149,8 +149,13 @@ class _MessagePageState extends State<MainMessagePage> {
 
   Widget _messageToUser(message) {
     var colourz = Colors.grey[100];
+    var cText = Colors.black;
+    var weight = FontWeight.normal;
     if(message["colored"].toString() == "true"){
-    colourz = Color(0xff8636fa).withOpacity(0.33);
+    colourz = Color(0xff8636fa).withOpacity(0.70);
+    cText = Colors.white;
+    weight = FontWeight.bold;
+    
     }
     return Center(child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -159,6 +164,10 @@ class _MessagePageState extends State<MainMessagePage> {
           child: Text(
             message["text"],
             textAlign: TextAlign.center,
+            style: TextStyle(
+              color: cText,
+              fontWeight: weight
+            ),
           ),
           padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           margin: EdgeInsets.fromLTRB(0, 20, 0, 0),

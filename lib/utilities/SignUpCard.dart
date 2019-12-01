@@ -52,14 +52,12 @@ class _SignUpCard extends State<SignUpCard> {
                   ),
                   //color: Colors.grey.shade200.withOpacity(0.3),
                   borderRadius: new BorderRadius.circular(20.0),
-                  // boxShadow: [
-                  // new BoxShadow(
-                  //   color: Colors.grey[400],
-                  //   blurRadius: 15.0,
-                  //   offset: new Offset(0.0, 10.0),
-                  // )],
                 ),
-                child: new IntrinsicHeight(
+                child: Wrap(
+                  children: <Widget>[
+
+
+                new IntrinsicHeight(
                   
 
                   child: new Row(
@@ -181,6 +179,10 @@ class _SignUpCard extends State<SignUpCard> {
                     ],
                   ),
                 ),
+
+                  ],
+                ),
+                
               ),
               onTap: () {
               },

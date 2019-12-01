@@ -111,12 +111,12 @@ class CentralPage extends StatelessWidget {
                     ),
 
 
-                   ShowUp(
-                      child: SignUpCard(
-                      locStore: locStore,
-                    ),                   
-                      delay: delayAmount * 6,
-                    ),
+                  //  ShowUp(
+                  //     child: SignUpCard(
+                  //     locStore: locStore,
+                  //   ),                   
+                  //     delay: delayAmount * 6,
+                  //   ),
                     
 
                     
